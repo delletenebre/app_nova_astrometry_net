@@ -1,0 +1,19 @@
+{
+  "@@locale": "ru",
+  "@@last_modified": "2021-06-03T11:09:40.150",
+
+  "back": "Назад",
+  "@back": {
+    "placeholders": {},
+    "description": "",
+    "type": "text"
+  },
+
+  "close": "Закрыть",
+  "@close": {
+    "placeholders": {},
+    "description": "",
+    "type": "text"
+  }
+
+}

@@ -1,0 +1,19 @@
+{
+  "@@locale": "en",
+  "@@last_modified": "2021-06-03T11:09:40.150",
+
+  "back": "Back",
+  "@back": {
+    "placeholders": {},
+    "description": "",
+    "type": "text"
+  },
+
+  "close": "Close",
+  "@close": {
+    "placeholders": {},
+    "description": "",
+    "type": "text"
+  }
+
+}
