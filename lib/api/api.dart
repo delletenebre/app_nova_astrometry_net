@@ -67,6 +67,8 @@ class Api {
     } on TimeoutException {
       AppLog.e('==== Api TimeoutException ====');
       return ApiResponse(statusCode: ApiResponse.NO_INTERNET_CONNECTION_CODE);
+    } on DioError {
+      return ApiResponse(statusCode: ApiResponse.NO_INTERNET_CONNECTION_CODE);
     }
   }
   

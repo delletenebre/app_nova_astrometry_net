@@ -79,16 +79,17 @@ class _ExpandableFabState extends State<ExpandableFab>
         child: Material(
           shape: const CircleBorder(),
           clipBehavior: Clip.antiAlias,
+          color: Theme.of(context).colorScheme.secondary,
           elevation: 4.0,
-          child: InkWell(
-            onTap: _toggle,
-            child: Tooltip(
-              message: 'Close',
+          child: Tooltip(
+            message: 'Close',
+            child: InkWell(
+              onTap: _toggle,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Icon(
                   Icons.close,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.onSecondary,
                 ),
               ),
             ),
@@ -134,6 +135,7 @@ class _ExpandableFabState extends State<ExpandableFab>
           curve: const Interval(0.25, 1.0, curve: Curves.easeInOut),
           duration: const Duration(milliseconds: 250),
           child: FloatingActionButton(
+            backgroundColor: Theme.of(context).colorScheme.primary,
             tooltip: 'Upload new file',
             onPressed: _toggle,
             child: const Icon(Icons.upload),
@@ -201,10 +203,11 @@ class ActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    
     return Material(
       shape: const CircleBorder(),
       clipBehavior: Clip.antiAlias,
-      color: theme.accentColor,
+      color: theme.colorScheme.primary,
       elevation: 4.0,
       child: IconTheme.merge(
         data: theme.accentIconTheme,
