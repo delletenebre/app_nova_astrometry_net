@@ -159,8 +159,7 @@ class HomePage extends StatelessWidget {
       }
       
     } on FileSelectionCanceledError catch (exception)  {
-      final reason = exception.platformError.toString();
-      print(reason);
+      // final reason = exception.platformError.toString();
     }
   }
 

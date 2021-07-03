@@ -2,7 +2,7 @@
 import 'dart:developer';
 
 class AppLog {
-  static const ENABLED = true;
+  static const ENABLED = false;
 
   static d(String message) {
     if (ENABLED) {

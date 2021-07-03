@@ -31,6 +31,9 @@ class Job extends HiveObject {
   @HiveField(6)
   Calibration? calibration;
 
+  @HiveField(7)
+  DateTime createdAt;
+
   Job(this.id, {
     this.status = UNKNOWN_STATUS,
     this.tags = const [],
@@ -38,7 +41,7 @@ class Job extends HiveObject {
     this.objectsInField = const [],
     this.originalFilename = '',
     this.calibration,
-  });
+  }) : createdAt = DateTime.now();
 
   bool get success => status == 'success';
   bool get failed => status == 'failure';

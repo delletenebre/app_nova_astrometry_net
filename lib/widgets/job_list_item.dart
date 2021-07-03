@@ -1,6 +1,8 @@
+import 'package:astrometry_net/api/api.dart';
 import 'package:astrometry_net/database/job.dart';
 import 'package:astrometry_net/widgets/buttons/job_update_button.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class JobListItem extends StatelessWidget {
   const JobListItem(this.job, {
@@ -13,7 +15,7 @@ class JobListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget? leading;
     if (job.success) {
-      leading = Image.network('http://nova.astrometry.net/annotated_display/${job.id}',
+      leading = Image.network('${Api.URL}/annotated_display/${job.id}',
         loadingBuilder: (context, child, loadingProgress) {
           if (loadingProgress == null) {
             return child;
@@ -28,9 +30,6 @@ class JobListItem extends StatelessWidget {
     if (!job.finished) {
       trailing = JobUpdateButton(
         job: job,
-        // onUpdate: () {
-        //   submission.save();
-        // }
       );
     }
 
@@ -50,7 +49,8 @@ class JobListItem extends StatelessWidget {
         onTap: onTap,
         leading: leading,
         title: Text(job.id.toString()),
-        subtitle: Text(job.status),
+        subtitle: Text(job.status + '\n' + DateFormat.yMd().format(job.createdAt)),
+        isThreeLine: true,
         trailing: trailing,
       )
     );

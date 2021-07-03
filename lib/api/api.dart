@@ -9,7 +9,8 @@ import 'package:dio/dio.dart';
 
 class Api {
   static const TIMEOUT = Duration(seconds: 60);
-  static const BASE_URL = 'https://nova.astrometry.net/api';
+  static const URL = 'https://nova.astrometry.net';
+  static const BASE_URL = '$URL/api';
 
   var apiKey = '';
   var session = '';

@@ -24,13 +24,13 @@ class JobAdapter extends TypeAdapter<Job> {
       objectsInField: (fields[4] as List).cast<String>(),
       originalFilename: fields[5] as String,
       calibration: fields[6] as Calibration?,
-    );
+    )..createdAt = fields[7] as DateTime;
   }
 
   @override
   void write(BinaryWriter writer, Job obj) {
     writer
-      ..writeByte(7)
+      ..writeByte(8)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -44,7 +44,9 @@ class JobAdapter extends TypeAdapter<Job> {
       ..writeByte(5)
       ..write(obj.originalFilename)
       ..writeByte(6)
-      ..write(obj.calibration);
+      ..write(obj.calibration)
+      ..writeByte(7)
+      ..write(obj.createdAt);
   }
 
   @override

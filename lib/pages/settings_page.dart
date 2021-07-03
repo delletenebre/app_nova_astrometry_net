@@ -1,3 +1,4 @@
+import 'package:astrometry_net/api/api.dart';
 import 'package:astrometry_net/resources/storage.dart';
 import 'package:astrometry_net/widgets/page_layout.dart';
 import 'package:astrometry_net/widgets/preferences/switch_preference.dart';
@@ -44,9 +45,9 @@ class SettingsPage extends StatelessWidget {
               SizedBox(height: 16),
               TextButton(
                 onPressed: () {
-                  launch('https://nova.astrometry.net/');
+                  launch('${Api.URL}/');
                 },
-                child: Text('Go to https://nova.astrometry.net/',
+                child: Text('Go to ${Api.URL}/',
                   textAlign: TextAlign.center,
                 ),
               ),

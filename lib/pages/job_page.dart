@@ -1,3 +1,4 @@
+import 'package:astrometry_net/api/api.dart';
 import 'package:astrometry_net/database/job.dart';
 import 'package:astrometry_net/resources/page_arguments.dart';
 import 'package:astrometry_net/widgets/app_network_image.dart';
@@ -49,7 +50,7 @@ class JobPage extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      launch('http://nova.astrometry.net/wcs_file/${job.id}');
+                      launch('${Api.URL}/wcs_file/${job.id}');
                     },
                     child: Text('wcs.fits'),
                   ),
@@ -65,7 +66,7 @@ class JobPage extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      launch('http://nova.astrometry.net/new_fits_file/${job.id}');
+                      launch('${Api.URL}/new_fits_file/${job.id}');
                     },
                     child: Text('new-image.fits'),
                   ),
@@ -81,7 +82,7 @@ class JobPage extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      launch('http://nova.astrometry.net/rdls_file/${job.id}');
+                      launch('${Api.URL}/rdls_file/${job.id}');
                     },
                     child: Text('rdls.fits'),
                   ),
@@ -97,7 +98,7 @@ class JobPage extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      launch('http://nova.astrometry.net/axy_file/${job.id}');
+                      launch('${Api.URL}/axy_file/${job.id}');
                     },
                     child: Text('axy.fits'),
                   ),
@@ -113,7 +114,7 @@ class JobPage extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      launch('http://nova.astrometry.net/corr_file/${job.id}');
+                      launch('${Api.URL}/corr_file/${job.id}');
                     },
                     child: Text('corr.fits'),
                   ),
@@ -204,7 +205,7 @@ class JobPage extends StatelessWidget {
             ),
 
             Center(
-              child: AppNetworkImage('https://nova.astrometry.net/$type/$jobId',
+              child: AppNetworkImage('${Api.URL}/$type/$jobId',
                 withProgress: true,
                 onPress: () {
                   showDialog(
@@ -212,7 +213,7 @@ class JobPage extends StatelessWidget {
                     builder: (context) {
                       return Dialog(
                         child: PhotoView(
-                          imageProvider: NetworkImage('https://nova.astrometry.net/$type/$jobId'),
+                          imageProvider: NetworkImage('${Api.URL}/$type/$jobId'),
                           tightMode: true,
                         ),
                       );
@@ -227,61 +228,15 @@ class JobPage extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () async {
-                    await launch('https://nova.astrometry.net/$type/$jobId');
+                    await launch('${Api.URL}/$type/$jobId');
                   },
                   child: Text('Open in browser'),
                 ),
-                // TextButton(
-                //   onPressed: () async {
-                    
-                //   },
-                //   child: Text('Save'),
-                // ),
               ],
             ),
           ],
         ),
       ),
     );
-
-    // return Card(
-    //   child: Column(
-    //     children: [
-    //       Text(title,
-    //         style: theme.textTheme.bodyText1
-    //       ),
-    //       // Container(
-    //       //   width: 180,
-    //       //   height: 120,
-    //       //   child: Image.network('https://nova.astrometry.net/$type/$jobId',
-    //       //     loadingBuilder: (context, child, loadingProgress) {
-    //       //       if (loadingProgress == null) {
-    //       //         return child;
-    //       //       }
-
-    //       //       double? progress;
-    //       //       if (loadingProgress.expectedTotalBytes != null) {
-    //       //         progress = loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes!;
-    //       //       }
-                
-    //       //       return Center(
-    //       //         child: CircularProgressIndicator(
-    //       //           value: progress,
-    //       //         ),
-    //       //       );
-    //       //     },
-    //       //   ),
-    //       // ),
-    //       // ButtonBar(
-    //       //   children: [
-    //       //     TextButton(
-    //       //       onPressed: () {},
-    //       //       child: Text('Download'),
-    //       //     )
-    //       //   ],
-    //       // ),
-    //     ],
-    //   ),
-    // );
   }
 }
