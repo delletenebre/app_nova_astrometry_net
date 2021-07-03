@@ -34,10 +34,8 @@ class JobListItem extends StatelessWidget {
     }
 
     VoidCallback? onTap;
-    if (job.finished) {
-      onTap = () => Navigator.pushNamed(
-        context,
-        '/job',
+    if (job.finished && job.success) {
+      onTap = () => Navigator.pushNamed(context, '/job',
         arguments: {
           'job': job,
         }
