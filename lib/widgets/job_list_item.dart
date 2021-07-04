@@ -1,5 +1,6 @@
 import 'package:astrometry_net/api/api.dart';
 import 'package:astrometry_net/database/job.dart';
+import 'package:astrometry_net/widgets/app_network_image.dart';
 import 'package:astrometry_net/widgets/buttons/job_update_button.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -15,15 +16,7 @@ class JobListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget? leading;
     if (job.success) {
-      leading = Image.network('${Api.URL}/annotated_display/${job.id}',
-        loadingBuilder: (context, child, loadingProgress) {
-          if (loadingProgress == null) {
-            return child;
-          }
-          
-          return CircularProgressIndicator();
-        },
-      );
+      leading = AppNetworkImage('${Api.URL}/annotated_display/${job.id}');
     }
 
     Widget? trailing;

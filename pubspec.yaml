@@ -16,6 +16,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
+  cached_network_image: ^3.0.0
   device_info_plus: ^1.0.1
   dio: ^4.0.0
   file_picker_cross: ^4.4.2
