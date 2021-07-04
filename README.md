@@ -1,16 +1,14 @@
-# astrometry_net
+# Astrometry.net
 
-A new Flutter project.
+Client for [nova.astomertry.net](https://nova.astomertry.net/)
 
-## Getting Started
+Supported platforms: android, iOS, macOS, windows, linux
 
-This project is a starting point for a Flutter application.
+## About Astrometry.net
 
-A few resources to get you started if this is your first Flutter project:
+If you have astronomical imaging of the sky with celestial coordinates you do not know—or do not trust—then Astrometry.net is for you. Input an image and we'll give you back astrometric calibration meta-data, plus lists of known objects falling inside the field of view.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+We have built this astrometric calibration service to create correct, standards-compliant astrometric meta-data for every useful astronomical image ever taken, past and future, in any state of archival disarray. We hope this will help organize, annotate and make searchable all the world's astronomical information.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+<img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/1.jpg" width="320"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/2.jpg" width="320"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/3.jpg" width="320">
