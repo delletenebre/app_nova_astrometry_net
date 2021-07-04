@@ -35,11 +35,18 @@ class Storage {
     Hive.registerAdapter(JobAdapter());
     Hive.registerAdapter(SubmissionAdapter());
 
-    // Hive.deleteBoxFromDisk('submissions');
-    // Hive.deleteBoxFromDisk('jobs');
+    try {
+      submissionsBox = await Hive.openBox('submissions');
+      jobsBox = await Hive.openBox('jobs');
 
-    submissionsBox = await Hive.openBox('submissions');
-    jobsBox = await Hive.openBox('jobs');
+    } on Exception {
+      Hive.deleteBoxFromDisk('submissions');
+      Hive.deleteBoxFromDisk('jobs');
+      
+      submissionsBox = await Hive.openBox('submissions');
+      jobsBox = await Hive.openBox('jobs');
+    }
+    
   }
 
   static dynamic read(String key, {dynamic defaultValue}) {

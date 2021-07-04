@@ -12,3 +12,5 @@ We have built this astrometric calibration service to create correct, standards-
 
 
 <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/1.jpg" width="240"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/2.jpg" width="240"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/3.jpg" width="240">
+
+<img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/4.jpg" width="320">
