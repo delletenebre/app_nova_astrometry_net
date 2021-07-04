@@ -11,4 +11,4 @@ If you have astronomical imaging of the sky with celestial coordinates you do no
 We have built this astrometric calibration service to create correct, standards-compliant astrometric meta-data for every useful astronomical image ever taken, past and future, in any state of archival disarray. We hope this will help organize, annotate and make searchable all the world's astronomical information.
 
 
-<img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/1.jpg" width="320"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/2.jpg" width="320"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/3.jpg" width="320">
+<img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/1.jpg" width="240"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/2.jpg" width="240"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/3.jpg" width="240">
