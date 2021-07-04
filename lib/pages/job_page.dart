@@ -3,6 +3,7 @@ import 'package:astrometry_net/database/job.dart';
 import 'package:astrometry_net/resources/page_arguments.dart';
 import 'package:astrometry_net/widgets/app_network_image.dart';
 import 'package:astrometry_net/widgets/page_layout.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -194,6 +195,8 @@ class JobPage extends StatelessWidget {
       cardWidth = screenWidth;
     }
 
+    final imageUrl = '${Api.URL}/$type/$jobId';
+
     return Card(
       child: SizedBox(
         width: cardWidth,
@@ -205,7 +208,7 @@ class JobPage extends StatelessWidget {
             ),
 
             Center(
-              child: AppNetworkImage('${Api.URL}/$type/$jobId',
+              child: AppNetworkImage(imageUrl,
                 withProgress: true,
                 onPress: () {
                   showDialog(
@@ -213,7 +216,7 @@ class JobPage extends StatelessWidget {
                     builder: (context) {
                       return Dialog(
                         child: PhotoView(
-                          imageProvider: NetworkImage('${Api.URL}/$type/$jobId'),
+                          imageProvider: CachedNetworkImageProvider(imageUrl),
                           tightMode: true,
                         ),
                       );
