@@ -1,8 +1,12 @@
-# Astrometry.net
+# App Astrometry.net
 
 Client for [nova.astomertry.net](https://nova.astomertry.net/)
 
 Supported platforms: android, iOS, macOS, windows, linux
+
+<img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/1.jpg" width="240"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/2.jpg" width="240"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/3.jpg" width="240">
+
+<img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/4.jpg" width="320">
 
 ## About Astrometry.net
 
@@ -15,7 +19,3 @@ We have built this astrometric calibration service to create correct, standards-
 Copyright 2006-2015 Michael Blanton, David W. Hogg, Dustin Lang, Keir Mierle and Sam Roweis (the Astrometry.net Team).
 
 Contributions from Sjoert van Velzen, Themos Tsikas, Andrew Hood, Thomas Stibor, Denis Vida, Ole Streicher, David Warde-Farley, Jon Barron, Christopher Stumm, Michal Kočer (Klet Observatory), Vladimir Kouprianov and others.
-
-<img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/1.jpg" width="240"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/2.jpg" width="240"> <img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/3.jpg" width="240">
-
-<img src="https://github.com/delletenebre/app_nova_astrometry_net/blob/master/screenshots/4.jpg" width="320">
